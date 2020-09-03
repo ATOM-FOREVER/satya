@@ -1,0 +1,325 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.pa{
+  font-family: 'Pacifico', cursive;
+  color: white;
+  font-size: 1.0rem;
+}
+strong{
+  color: #d92027;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 1.0rem;
+}
+
+.wrapper {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgb(230, 91, 240) 0%,
+    rgba(49, 18, 172, 0.63) 35%,
+    rgb(153, 29, 255) 100%
+  );
+
+}
+h2 {
+  font-family: poppins;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: whitesmoke;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.box div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  justify-content: left;
+  background-color: transparent;
+  border: 6px solid whitesmoke;
+  border-radius: 20%;
+  border-style: dotted;
+}
+
+.box div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: hello 10s linear infinite;
+}
+.box div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: hello 7s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: hello 9s linear infinite;
+}
+.box div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: hello 10s linear infinite;
+}
+.box div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: hello 6s linear infinite;
+}
+.box div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: hello 12s linear infinite;
+}
+.box div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: hello 15s linear infinite;
+}
+.box div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: hello 16s linear infinite;
+}
+.box div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: hello 9s linear infinite;
+}
+.box div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: hello 5s linear infinite;
+}
+
+@keyframes hello {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#logo{
+    height: 30vh;
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    left: 19%;
+    bottom: 50%;
+    transform: translate(45%,-90%);
+    animation: fill 0.5s ease forwards 3.5s;
+}
+
+#logo path:nth-child(1){
+    stroke-dasharray: 423.79296875px;
+    stroke-dashoffset: 423.79296875px;
+    animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 445.44000244140625px;
+    stroke-dashoffset: 445.44000244140625px;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 471.6254577636719px;
+    stroke-dashoffset: 471.6254577636719px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 280.5600280761719px;
+    stroke-dashoffset: 280.5600280761719px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 403.2440185546875px;
+    stroke-dashoffset: 403.2440185546875px;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 503.7358703613281px;
+    stroke-dashoffset: 503.7358703613281px;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+#logo path:nth-child(7){
+    stroke-dasharray: 408.5766296386719px;
+    stroke-dashoffset: 408.5766296386719px;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+#logo path:nth-child(8){
+    stroke-dasharray: 503.7358093261719px;
+    stroke-dashoffset: 503.7358093261719px;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+#logo path:nth-child(9){
+    stroke-dasharray: 476.3149108886719px;
+    stroke-dashoffset: 476.3149108886719px;
+    animation: line-anim 2s ease forwards 2.4s;
+}
+#logo path:nth-child(10){
+    stroke-dasharray: 408.5766296386719px;
+    stroke-dashoffset: 408.5766296386719px;
+    animation: line-anim 2s ease forwards 2.7s;
+}
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: white;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-2.7%,0%);
+}
+
+span {
+    width: 8px;
+    height: 30px;
+    background-color: white;
+    margin-left: 3px;
+    transform: scaleY(0);
+    animation: animate 1s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(1.5);
+    }
+}
+
+.cover{
+  align-items: center;
+  justify-content: center;
+  transform: translate(-10%,50%);
+}
+
+.text-typing{
+    padding: 20px 30px;
+    background: none;
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform: translate(60%,20%);
+    transition: 0.5s ease;
+}
+
+.text-typing p {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(53,end) forwards,
+                blink 1s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%,100% {
+        border-right: 2px solid transparent;
+    }
+    50% {
+        border-right: 2px solid #222;
+    }
+}
+
+.line{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.line-1{
+    z-index: 15;
+    opacity: 0.5;
+}
+
+.line-2{
+    z-index: 10;
+    opacity: 0.7;
+}
+
+.line-3{
+    z-index: 5;
+}
+
+.wave{
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.wave1{
+    -webkit-background-size: 50% 80px;
+    background-size: 50% 80px;
+}
+
+.wave2{
+    -webkit-background-size: 50% 100px;
+    background-size: 50% 100px;
+    animation: wavy 12s linear infinite;
+}
+
+.wave3{
+    -webkit-background-size: 50% 80px;
+    background-size: 50% 80px;
+    animation: wavy 18s linear infinite;
+}
+
+@keyframes wavy {
+    0%{
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50%{
+        transform: translateX(-25%) translateZ(0) scaleY(0.5);
+    }
+    0%{
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+}
